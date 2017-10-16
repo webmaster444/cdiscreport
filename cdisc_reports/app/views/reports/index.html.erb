@@ -1,0 +1,8 @@
+<h1>Reports</h1>
+<ul>
+  <% @reports.each do |report| %>
+  <li>
+    <%= link_to "#{report.id} - #{report.client} - #{report.date.strftime("%B %d, %Y")} ", report_path(report) %>
+  </li>
+  <% end %>
+</ul>

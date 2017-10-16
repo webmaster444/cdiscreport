@@ -1,0 +1,27 @@
+<div class="report">
+  <h1>CDISC Report</h1>
+ 
+  <h3>To: <%= report.client %></h3>
+  <h3>Date: <%= report.date.strftime("%B %d, %Y") %></h3>
+ 
+  <table>
+    <thead>
+        <tr>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>        
+        <tr class="count">
+          <td style="text-align: right">Count: </td>
+          <td><%= report.count %></span></td>
+        </tr>
+      </tbody>
+  </table>
+ 
+  <% if report.notes %>
+  <div class="notes">
+    <p><strong>Notes:</strong> <%= report.notes %></p>
+  </div>
+  <% end %>
+</div>
